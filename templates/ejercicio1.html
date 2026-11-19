@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Notas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Formulario de Notas</h1>
+        <h2>Ejercicio 1</h2>
+
+        <form action="/ejercicio1" method="POST">
+            <label>Nota 1:</label>
+            <input type="number" name="nota1" min="10" max="70" required>
+
+            <label>Nota 2:</label>
+            <input type="number" name="nota2" min="10" max="70" required>
+
+            <label>Nota 3:</label>
+            <input type="number" name="nota3" min="10" max="70" required>
+
+            <label>Asistencia (%):</label>
+            <input type="number" name="asistencia" min="0" max="100" required>
+
+            <button type="submit" class="boton">Calcular</button>
+        </form>
+
+        {% if promedio is defined %}
+            <h2>Resultado</h2>
+            <p>Promedio: {{ promedio }}</p>
+            <p>Asistencia: {{ asistencia }}%</p>
+            <h2>{{ estado }}</h2>
+        {% endif %}
+
+        <a href="/" class="boton">Volver al menú</a>
+    </div>
+</body>
+</html>

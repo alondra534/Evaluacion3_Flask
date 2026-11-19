@@ -1,0 +1,73 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 350px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+    font-size: 18px;
+}
+
+.boton {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+/* Diseño de los formularios */
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button.boton {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}

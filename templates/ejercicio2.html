@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Nombres</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Formulario de Nombres</h1>
+        <h2>Ejercicio 2</h2>
+
+        <form action="/ejercicio2" method="POST">
+            <label>Nombre 1:</label>
+            <input type="text" name="nombre1" required>
+
+            <label>Nombre 2:</label>
+            <input type="text" name="nombre2" required>
+
+            <label>Nombre 3:</label>
+            <input type="text" name="nombre3" required>
+
+            <button type="submit" class="boton">Comparar</button>
+        </form>
+
+        {% if nombre_mayor is defined %}
+            <h2>Resultado</h2>
+            <p>El nombre con más letras es:</p>
+            <h2>{{ nombre_mayor }}</h2>
+            <p>Cantidad de letras: {{ cantidad }}</p>
+        {% endif %}
+
+        <a href="/" class="boton">Volver al menú</a>
+    </div>
+</body>
+</html>
